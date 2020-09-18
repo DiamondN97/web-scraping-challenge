@@ -21,7 +21,7 @@ def scrape():
 
     mars_data = mongo.db.mars_data
     mars_stuff = scrape_mars.scrape()
-    mars_data.replace_one({}, mars_stuff, upsert = True)
+    mars_data.replace_many({}, mars_stuff, upsert = True)
     return ('Done Scraping! ')
 
 

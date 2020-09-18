@@ -12,8 +12,9 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel = "stylesheet" href="Resources/bootstrap.css">
+<link rel = "stylesheet"  href="css/style.css" href="Resources/bootstrap.css" />
 <title>Mars Facts</title>
+
 </head>
 
 <body style="background-color:rgb(17, 17, 17);">
@@ -31,39 +32,42 @@
            {{ mars_data.mars_facts_html | safe }}
       </div>
       <div class="col-8" style="background-color: white; width: 50%;">
-        <h4> <a href="https://mars.nasa.gov/news/"><center>Latest News</center></a> <br>
-          Latest Headline: 
-        {{ mars_data.latest_headline }}</h4>
-        <h4> {{ mars_data.latest_paragraph }} </h4>
+        <h2><em> <a href="https://mars.nasa.gov/news/"><center>Latest News</center></a> </em></h2><br>
+          <h3>Latest Headline: </h3>
+        <h6><i>{{ mars_data.latest_headline }}</i></h6>
+        <h6> {{ mars_data.latest_paragraph }} </h6>
       </div>
     </div>
   </div>
 
   <div class="container" style="background-color: rgb(17, 17, 17);">
     <div class="row">
-      <div class="col-12">
-        <h3 style="color: white;">What's new ?
-          </br>
-          <img src="{{mars_data.featured_image_url }}" width="50%" height="50%"> </h3>
-      </div>
+      
     </div>
-    <div class="row">
+    <div class="row" >
       <h3 style="color: white;">Take a look at Mars!</h3>
     </div>
-    <div class="row">
-      <div class="column" style="column-gap: 40 px;">
-        <img src = "{{mars_data.hemisphere_images[0]['img_url']}}" width="75%" height="75%">
-      </div>
-      <div class="column" style="column-gap: 40 px;">
+        <div class="col-md-3 col-sm-4 col-xs-6">
+         <!-- <div class="thumbnail_container"> -->
+          <!-- <div class="thumbnail"> -->
+              <figure>
+                  <img src = "{{mars_data.hemisphere_images[0]['img_url']}}" width="75%" height="75%">y">
+                      <!-- <img alt="Cerberus Hemisphere Enhanced" style="color:white;"> -->
+                      <h6 style="color:white;" class="text-center"><u>Cerebus Hemisphere</u></h6>
+                    </a>
+                </figure>
+    <!--  -->
+      <div class="row" class='col-3' style=" 40 px;">
         <img src = "{{mars_data.hemisphere_images[1]['img_url']}}" width="75%" height="75%">
       </div>
-      <div class="column" style="column-gap: 40 px;">
+      <div class="row" class='col-3' style="column-gap: 40 px;">
         <img src = "{{mars_data.hemisphere_images[2]['img_url']}}" width="75%" height="75%">
       </div>
      <div class="row">
-      <div class="column" style="column-gap: 40 px;">
+      <div class="row" class='col-3' style="column-gap: 40 px;">
         <img src = "{{mars_data.hemisphere_images[3]['img_url']}}" width="75%" height="75%">
       </div>
+    </div>
 
 
     <div class="row">

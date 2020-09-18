@@ -297,19 +297,4 @@ def scrape():
 	db.mars_info_dict.insert_one(mars_info_dict)
 
 
-
-	# def scrape_2(): 
-	# executable_path = {'executable_path': r'C:\Program Files\Chromedriver\chromedriver.exe'}
-	# browser = Browser('chrome', **executable_path, headless=False)
-	# nasa_news_url = 'https://mars.nasa.gov/news/'
-	# # Retrieve page with the requests module
-	# news_response = requests.get(nasa_news_url)
-	# time.sleep(5)
-	# browser.quit()
-
-	# Retrieve page with the requests module
-
-
-	# hemisphere_image_urls = hemisphere_image_urls
-
 	return mars_info_dict
