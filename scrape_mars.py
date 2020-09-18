@@ -1,13 +1,13 @@
-	#!/usr/bin/env python
-	# coding: utf-8
+#!/usr/bin/env python
+# coding: utf-8
 
-	# # Part One: Scrape NASA
-	# Scrape the NASA Mars News Site and collect the latest News Title and Paragraph Text. 
-	# Assign the text to variables to reference later.
+# # Part One: Scrape NASA
+# Scrape the NASA Mars News Site and collect the latest News Title and Paragraph Text. 
+# Assign the text to variables to reference later.
 
 
 
-	#Import dependencies
+#Import dependencies
 import pandas as pd
 from bs4 import BeautifulSoup as bs
 import requests
@@ -89,9 +89,9 @@ def scrape():
 
 	url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
 	browser.visit(url)
-	browser.click_link_by_partial_text('FULL IMAGE')
+	browser.find_link_by_partial_text('FULL IMAGE').click()
 	time.sleep(5)
-	browser.click_link_by_partial_text('more info')
+	browser.find_link_by_partial_text('more info').click()
 
 
 
@@ -312,4 +312,4 @@ def scrape():
 
 	# hemisphere_image_urls = hemisphere_image_urls
 
-
+	return mars_info_dict
