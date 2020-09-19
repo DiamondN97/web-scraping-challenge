@@ -43,6 +43,13 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+}
+
+.imageStack {
+    float: left;
+    width: 300px;
+}
+
 *,
 *::before,
 *::after {

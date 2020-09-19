@@ -12,7 +12,8 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<link rel = "stylesheet"  href="css/style.css" href="Resources/bootstrap.css" />
+<link rel = "stylesheet"  href="Resources/bootstrap.css" />
+<link href='css/style.css' rel='stylesheet' type='text/css'>
 <title>Mars Facts</title>
 
 </head>
@@ -47,39 +48,48 @@
     <div class="row" >
       <h3 style="color: white;">Take a look at Mars!</h3>
     </div>
-        <div class="row">
-          <div class="column">
+        <div class="col-md-4 col-sm-6 col-xs-8" class = "imageStack">
+          <div class = "tumbnail_container"
+          <div class = "tumbnail">
+          <div class = "row" class = "imageStack" >
               <figure>
                   <img src = "{{mars_data.hemisphere_images[0]['img_url']}}" width="75%" height="75%" alt = "Cerebus">
                       <!-- <img alt="Cerberus Hemisphere Enhanced" style="color:white;"> -->
                       <h4 style="color:white;" class="text-left"><u>Cerebus Hemisphere</u></h4>
                     </a>
                 </figure>
-              </div>
+            </div>
            
-           
-              <div class="column">
+            <div class = "row" class = "imageStack">
               <figure>
                   <img src = "{{mars_data.hemisphere_images[1]['img_url']}}" width="75%" height="75%" alt = "Valles Marineris">
                       <!-- <img alt="Cerberus Hemisphere Enhanced" style="color:white;"> -->
                       <h4 style="color:white;" class="text-left"><u>Valles Marineris Hemisphere</u></h4>
                     </a>
                 </figure>
-        <div class="column">
+            </div>
+        <div class = "row">
               <figure>
+                <div  class = "imageStack">
                   <img src = "{{mars_data.hemisphere_images[2]['img_url']}}" width="75%" height="75%" alt = "Schiaparelli">
                       <!-- <img alt="Cerberus Hemisphere Enhanced" style="color:white;"> -->
                       <h4 style="color:white;" class="text-left"><u>Schiaparelli Hemisphere</u></h4>
                     </a>
                 </figure>
-        <div class="row">
+              </div>
+            </div>
+        <div class = "row" class = "imageStack">
+
               <figure>
+
                   <img src = "{{mars_data.hemisphere_images[3]['img_url']}}" width="75%" height="75%" alt = "Syrtis Major" >
                       <!-- <img alt="Cerberus Hemisphere Enhanced" style="color:white;"> -->
                       <h4 style="color:white;" class="text-left"><u>Syrtis Major Hemisphere</u></h4>
                     </a>
+
                 </figure>
-    
+            </div>
+          </div>
 
 
     <!--  -->
